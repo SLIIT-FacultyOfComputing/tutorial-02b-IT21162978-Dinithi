@@ -1,4 +1,4 @@
-/*Exercise 4 - Functions
+ /*Exercise 4 - Functions
 
 Write a program to calculate the function called nCr which is defined as
 
@@ -26,4 +26,18 @@ int main() {
   std::cout << nCr(n,r);
   std::cout << std::endl;
   return 0;
+}
+
+long factorial(int no)
+{
+  int i, test = 1;
+  for (i = 1; i <= no; i++)
+  {
+    test = test * i;
+  }
+  return test;
+}
+long nCr(int n, int r)
+{
+  return (factorial(n) / (factorial(r) * factorial (n - r)));
 }
